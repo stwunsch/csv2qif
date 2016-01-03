@@ -1,0 +1,14 @@
+{
+    "account_name": "Sparkasse",
+    "account_type": "Bank",
+
+    "file_delimiter": ";",
+    "decimal_delimiter": ",",
+
+    "first_column": 2,
+    "last_column": -0,
+
+    "row_date": 2,
+    "row_memo": 5,
+    "row_amount": 9
+}
