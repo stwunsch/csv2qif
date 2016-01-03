@@ -33,9 +33,9 @@ counter = 0
 with codecs.open(input_csv_name, 'r', encoding=bank_template_data['file_encoding']) as input_csv_file:
     reader = csv.reader(input_csv_file, delimiter=bank_template_data["file_delimiter"])
     for num, row in enumerate(reader):
-        if num < bank_template_data['first_column']+1:
+        if num < bank_template_data['first_column']-1:
             continue
-        if num == bank_template_data['last_column']-1+line_nums:
+        if num == bank_template_data['last_column']+line_nums:
             break
         input_csv_data[0].append(row[bank_template_data['row_date']-1]); # date
         input_csv_data[1].append(row[bank_template_data['row_memo']-1]); # memo
