@@ -39,7 +39,7 @@ with codecs.open(input_csv_name, 'r', encoding=bank_template_data['file_encoding
             break
         input_csv_data[0].append(row[bank_template_data['row_date']-1]); # date
         input_csv_data[1].append(row[bank_template_data['row_memo']-1]); # memo
-        input_csv_data[2].append(float(row[bank_template_data['row_amount']-1].replace(bank_template_data['decimal_delimiter'],".").replace(bank_template_data['decimal_delimiter'],""))); # account
+        input_csv_data[2].append(float(row[bank_template_data['row_amount']-1].replace(bank_template_data['decimal_delimiter'],".").replace(bank_template_data['thousands_delimiter'],""))); # account
         input_csv_data[3].append(row[bank_template_data['row_payee']-1]); # payee
         counter = counter + 1
 
