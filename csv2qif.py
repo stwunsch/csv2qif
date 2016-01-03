@@ -24,13 +24,13 @@ with open(bank_template_name) as bank_template_file:
     bank_template_data = json.load(bank_template_file)
 
 # Read CSV input file
-with codecs.open(input_csv_name, 'r', encoding='utf-8', errors='ignore') as input_csv_file:
+with codecs.open(input_csv_name, 'r', encoding=bank_template_data['file_encoding']) as input_csv_file:
     reader = csv.reader(input_csv_file, delimiter=bank_template_data["file_delimiter"])
     line_nums = len(input_csv_file.readlines())
 
 input_csv_data = [[],[],[],[]] # date, memo, amount, payee
 counter = 0
-with codecs.open(input_csv_name, 'r', encoding='utf-8', errors='ignore') as input_csv_file:
+with codecs.open(input_csv_name, 'r', encoding=bank_template_data['file_encoding']) as input_csv_file:
     reader = csv.reader(input_csv_file, delimiter=bank_template_data["file_delimiter"])
     for num, row in enumerate(reader):
         if num < bank_template_data['first_column']+1:

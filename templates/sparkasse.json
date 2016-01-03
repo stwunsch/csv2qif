@@ -4,6 +4,7 @@
 
     "file_delimiter": ";",
     "decimal_delimiter": ",",
+    "file_encoding": "latin1",
 
     "first_column": 2,
     "last_column": -0,
