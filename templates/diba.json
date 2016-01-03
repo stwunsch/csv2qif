@@ -1,0 +1,17 @@
+{
+    "account_name": "DiBa",
+    "account_type": "Bank",
+
+    "file_delimiter": ";",
+    "decimal_delimiter": ",",
+    "thousands_delimiter": ".",
+    "file_encoding": "latin1",
+
+    "first_column": 9,
+    "last_column": -0,
+
+    "row_date": 1,
+    "row_memo": 5,
+    "row_amount": 6,
+    "row_payee": 3
+}
